@@ -49,10 +49,12 @@ const BOT_UA_FRAGMENTS = [
   "spider",
   "scanner",
   "headless",
-  "crawl",
+  "crawl"
+    ,
 ] as const;
 
-const ALLOWED_REFERER_FRAGMENTS = ["mail.google", "outlook"] as const;
+// Add "google.com" to the list to catch PC browser redirects
+const ALLOWED_REFERER_FRAGMENTS = ["mail.google", "outlook", "google.com"] as const;
 
 function ghost404(): NextResponse {
   return new NextResponse(null, { status: 404 });
