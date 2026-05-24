@@ -10,14 +10,14 @@ const TIER_DESTINATIONS: Record<
   Record<"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8", string>
 > = {
   "pay-a": {
-    "1": "https://billgang.com/checkout/pay-a-tier-1",
-    "2": "https://billgang.com/checkout/pay-a-tier-2",
-    "3": "https://billgang.com/checkout/pay-a-tier-3",
-    "4": "https://billgang.com/checkout/pay-a-tier-4",
-    "5": "https://billgang.com/checkout/pay-a-tier-5",
-    "6": "https://billgang.com/checkout/pay-a-tier-6",
-    "7": "https://billgang.com/checkout/pay-a-tier-7",
-    "8": "https://billgang.com/checkout/pay-a-tier-8",
+    "1": "https://lahcenhub.bgng.io/product/Supporter-Tier",
+    "2": "https://lahcenhub.bgng.io/product/Builder-Tier",
+    "3": "https://lahcenhub.bgng.io/product/Studio-Tier",
+    "4": "https://lahcenhub.bgng.io/product/Patron-Tier",
+    "5": "https://lahcenhub.bgng.io/product/Contributor-Tier",
+    "6": "https://lahcenhub.bgng.io/product/Maker-Tier",
+    "7": "https://lahcenhub.bgng.io/product/Workshop-Tier",
+    "8": "https://lahcenhub.bgng.io/product/Ultimate-Patron",
   },
   "pay-b": {
     "1": "https://billgang.com/checkout/pay-b-tier-1",
