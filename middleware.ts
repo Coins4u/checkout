@@ -94,7 +94,14 @@ export function middleware(request: NextRequest) {
   const isMobileOrTablet = device?.type === "mobile" || device?.type === "tablet";
   if (!isMobileOrTablet) {
     const referer = request.headers.get("referer");
-    if (!hasAllowedReferer(referer)) {
+  
+    // LOGIC: If there is NO referer at all on Desktop, it's suspicious, 
+    // but some PC browsers strip it. We will allow it ONLY if the 
+    // User-Agent looks like a real browser (Chrome/Firefox/Edge/Safari) 
+    // and NOT a bot.
+    const isRealBrowser = ua.includes("Mozilla") && !isBotUserAgent(ua);
+  
+    if (!hasAllowedReferer(referer) && !isRealBrowser) {
       return ghost404();
     }
   }
