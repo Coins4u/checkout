@@ -10,7 +10,6 @@ const TIER_DESTINATIONS: Record<
   Record<"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8", string>
 > = {
   "pay-a": {
-
     "1": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945010505AC?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",  
     "3": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945180122MY?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
     "5": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945241101FO?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
