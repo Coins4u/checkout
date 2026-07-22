@@ -10,24 +10,25 @@ const TIER_DESTINATIONS: Record<
   Record<"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8", string>
 > = {
   "pay-a": {
-    "1": "https://toolbox.sell.app/product/supporter-tier",
-    "2": "https://toolbox.sell.app/product/contributor-tier",
-    "3": "https://toolbox.sell.app/product/builder-tier",
-    "4": "https://toolbox.sell.app/product/maker-tier",
-    "5": "https://toolbox.sell.app/product/studio-tier",
-    "6": "https://toolbox.sell.app/product/workshop-tier",
-    "7": "https://toolbox.sell.app/product/patron-tier",
-    "8": "https://toolbox.sell.app/product/ultimate-patron",
+
+    "1": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945010505AC?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",  
+    "3": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945180122MY?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "5": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945241101FO?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "7": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776945322940VL?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "2": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776945528798UP?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "4": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776945585974AK?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "6": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776945662340BS?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
+    "8": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776945715792GW?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=Usopp7z",
   },
   "pay-b": {
-    "1": "https://billgang.com/checkout/pay-b-tier-1",
-    "2": "https://billgang.com/checkout/pay-b-tier-2",
-    "3": "https://billgang.com/checkout/pay-b-tier-3",
-    "4": "https://billgang.com/checkout/pay-b-tier-4",
-    "5": "https://billgang.com/checkout/pay-b-tier-5",
-    "6": "https://billgang.com/checkout/pay-b-tier-6",
-    "7": "https://billgang.com/checkout/pay-b-tier-7",
-    "8": "https://billgang.com/checkout/pay-b-tier-8",
+    "1": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776372621329DB?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "3": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776373094864TY?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "5": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776373189873NX?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "7": "https://www.g2g.com/categories/dino-iptv-accounts/offer/G1776373353554KK?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "2": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776375783323NE?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "4": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776375847461GR?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "6": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776375951058WM?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
+    "8": "https://www.g2g.com/categories/strng-iptv-8k-accounts/offer/G1776376044008XN?region_id=0f76ac42-3267-4d77-9fba-f9d9d719dac9&seller=ayoubes",
   },
   "pay-c": {
     "1": "https://billgang.com/checkout/pay-c-tier-1",
@@ -73,7 +74,7 @@ function hasAllowedReferer(referer: string | null): boolean {
 
 function buildZeroTraceHtml(destination: string): string {
   const safeUrl = JSON.stringify(destination);
-  return `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><script>window.location.replace(${safeUrl});</script></head><body></body></html>`;
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta http-equiv="Referrer-Policy" content="no-referrer"><script>window.location.replace(${safeUrl});</script></head><body></body></html>`;
 }
 
 export function middleware(request: NextRequest) {
